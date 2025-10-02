@@ -1,8 +1,10 @@
 require('dotenv').config()
 const { Resend } = require('resend');
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 const {EMAIL_KEY, EMAIL_DEST} = process.env;
 const resend = new Resend(EMAIL_KEY);
 
