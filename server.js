@@ -34,7 +34,7 @@ app.post('/data', async (req, res) => {
     <p>message: <strong>${message}</strong></p>
   `;
   const { data, error } = await resend.emails.send({
-    from: order_source === 'gdlglow' ? "GDG Glow <onboarding@resend.dev>" : "Portfolio <onboarding@resend.dev>",
+    from: order_source === 'gdlglow' ? "GDL Glow <no-reply@gdlglow.com>" : "Portfolio <no-reply@gdlglow.com>",
     to: order_source === 'gdlglow' ? [EMAIL_DEST, SEC_EMAIL_DEST] : [EMAIL_DEST],
     subject: authenticated ? "Important message!!!" : "View alert!",
     html: authenticated ? authenticatedTemplate : (order_source === 'gdlglow' ? candleOrderTemplate : unaauthenticatedTemplate),
