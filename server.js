@@ -15,6 +15,7 @@ app.post('/data', async (req, res) => {
   let candleOrderTemplate = '';
   if(order_source === 'gdlglow'){
     candleOrderTemplate = `
+    <h1>New Candle Order</h1>
     <p>name: <strong>${name}</strong></p>
     <p>email: <strong>${email}</strong></p>
     <p>phone: <strong>${phone}</strong></p>
